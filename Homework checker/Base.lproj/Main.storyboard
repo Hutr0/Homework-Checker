@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="627.536231884058" y="45.535714285714285"/>
         </scene>
-        <!--Add a homework-->
+        <!--Add-->
         <scene sceneID="0wW-my-EqR">
             <objects>
                 <tableViewController id="wNe-5u-mra" customClass="AddController" customModule="Homework_checker" customModuleProvider="target" sceneMemberID="viewController">
@@ -167,6 +167,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="SIh-DV-ESA"/>
                                                     </constraints>
+                                                    <locale key="locale" localeIdentifier="ru_RU"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -222,7 +223,7 @@
                             <outlet property="delegate" destination="wNe-5u-mra" id="qxh-bw-OHD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add a homework" largeTitleDisplayMode="always" id="pKh-wz-rcV">
+                    <navigationItem key="navigationItem" title="Add" id="pKh-wz-rcV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cD0-2U-43O">
                             <color key="tintColor" systemColor="systemRedColor"/>
                         </barButtonItem>
