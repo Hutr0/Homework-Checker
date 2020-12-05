@@ -60,7 +60,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите название домашней работы" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="swn-ar-22f">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите название домашней работы" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="swn-ar-22f">
                                                     <rect key="frame" x="16" y="54" width="382" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="ko5-QS-VHl"/>
@@ -119,11 +119,41 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="220" id="rKI-ym-FVT">
-                                        <rect key="frame" x="0.0" y="293" width="414" height="220"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="203" id="CLI-Kp-jxU">
+                                        <rect key="frame" x="0.0" y="293" width="414" height="203"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLI-Kp-jxU" id="fdk-LM-o97">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Предмет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTF-0h-WCv">
+                                                    <rect key="frame" x="160" y="16" width="94" height="30"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                    <color key="textColor" red="0.38884508099999998" green="0.3901471265" blue="0.39405326299999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svb-CG-cBw">
+                                                    <rect key="frame" x="16" y="62" width="382" height="125"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="125" id="8Vd-ju-1oV"/>
+                                                    </constraints>
+                                                </pickerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Svb-CG-cBw" secondAttribute="bottom" constant="16" id="34e-a7-sla"/>
+                                                <constraint firstItem="Svb-CG-cBw" firstAttribute="top" secondItem="LTF-0h-WCv" secondAttribute="bottom" constant="16" id="5T8-p3-moX"/>
+                                                <constraint firstAttribute="trailing" secondItem="Svb-CG-cBw" secondAttribute="trailing" constant="16" id="Aoo-dX-hpF"/>
+                                                <constraint firstItem="LTF-0h-WCv" firstAttribute="centerX" secondItem="fdk-LM-o97" secondAttribute="centerX" id="OxJ-21-xbf"/>
+                                                <constraint firstItem="LTF-0h-WCv" firstAttribute="top" secondItem="fdk-LM-o97" secondAttribute="top" constant="16" id="dBZ-Uo-uj9"/>
+                                                <constraint firstItem="Svb-CG-cBw" firstAttribute="leading" secondItem="fdk-LM-o97" secondAttribute="leading" constant="16" id="tEv-5J-PMY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="228" id="rKI-ym-FVT">
+                                        <rect key="frame" x="0.0" y="496" width="414" height="228"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rKI-ym-FVT" id="6AZ-yu-oTh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата сдачи" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orC-gR-Af3">
@@ -132,8 +162,8 @@
                                                     <color key="textColor" red="0.38884508099999998" green="0.3901471265" blue="0.39405326299999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="HZ0-AN-cqD">
-                                                    <rect key="frame" x="16" y="54" width="382" height="150"/>
+                                                <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="HZ0-AN-cqD">
+                                                    <rect key="frame" x="16" y="62" width="382" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="SIh-DV-ESA"/>
                                                     </constraints>
@@ -145,19 +175,19 @@
                                                 <constraint firstAttribute="trailing" secondItem="HZ0-AN-cqD" secondAttribute="trailing" constant="16" id="NJN-of-uin"/>
                                                 <constraint firstItem="orC-gR-Af3" firstAttribute="centerX" secondItem="6AZ-yu-oTh" secondAttribute="centerX" id="Pzb-XV-XVg"/>
                                                 <constraint firstItem="HZ0-AN-cqD" firstAttribute="leading" secondItem="6AZ-yu-oTh" secondAttribute="leading" constant="16" id="RXg-tC-O5n"/>
-                                                <constraint firstItem="HZ0-AN-cqD" firstAttribute="top" secondItem="orC-gR-Af3" secondAttribute="bottom" constant="8" id="c0L-LC-4MG"/>
+                                                <constraint firstItem="HZ0-AN-cqD" firstAttribute="top" secondItem="orC-gR-Af3" secondAttribute="bottom" constant="16" id="c0L-LC-4MG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="110" id="Q53-d9-8FI">
-                                        <rect key="frame" x="0.0" y="513" width="414" height="110"/>
+                                        <rect key="frame" x="0.0" y="724" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q53-d9-8FI" id="FYu-xw-KBE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iG-oj-4nf">
-                                                    <rect key="frame" x="155.5" y="16" width="103" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приоритет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iG-oj-4nf">
+                                                    <rect key="frame" x="148" y="16" width="118" height="30"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
                                                     <color key="textColor" red="0.38884508099999998" green="0.3901471265" blue="0.39405326299999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -192,7 +222,12 @@
                             <outlet property="delegate" destination="wNe-5u-mra" id="qxh-bw-OHD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add a homework" largeTitleDisplayMode="always" id="pKh-wz-rcV"/>
+                    <navigationItem key="navigationItem" title="Add a homework" largeTitleDisplayMode="always" id="pKh-wz-rcV">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cD0-2U-43O">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="fai-7j-UCU"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcN-BO-d8Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,7 +242,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="30"/>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="35"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -228,7 +263,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="30"/>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="27"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -247,6 +282,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
