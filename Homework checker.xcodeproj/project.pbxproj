@@ -14,6 +14,7 @@
 		E08152B9257B21E7002722DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E08152B8257B21E7002722DB /* Assets.xcassets */; };
 		E08152BC257B21E7002722DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08152BA257B21E7002722DB /* LaunchScreen.storyboard */; };
 		E08152C7257B2654002722DB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08152C6257B2654002722DB /* TableViewController.swift */; };
+		E08B8875257B7BFC009F33CA /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B8874257B7BFC009F33CA /* AddController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E08152BB257B21E7002722DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E08152BD257B21E7002722DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E08152C6257B2654002722DB /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		E08B8874257B7BFC009F33CA /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				E08152AC257B21E6002722DB /* AppDelegate.swift */,
 				E08152AE257B21E6002722DB /* SceneDelegate.swift */,
 				E08152C6257B2654002722DB /* TableViewController.swift */,
+				E08B8874257B7BFC009F33CA /* AddController.swift */,
 				E08152B2257B21E6002722DB /* Main.storyboard */,
 				E08152B8257B21E7002722DB /* Assets.xcassets */,
 				E08152BA257B21E7002722DB /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E08152B7257B21E6002722DB /* Homework_checker.xcdatamodeld in Sources */,
+				E08B8875257B7BFC009F33CA /* AddController.swift in Sources */,
 				E08152AD257B21E6002722DB /* AppDelegate.swift in Sources */,
 				E08152AF257B21E6002722DB /* SceneDelegate.swift in Sources */,
 				E08152C7257B2654002722DB /* TableViewController.swift in Sources */,
