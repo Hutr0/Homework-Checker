@@ -15,7 +15,6 @@ struct Homework {
     var date: Date
     
     init(name: String, lesson: String, description: String, priority: String, date: Date) {
-        
         self.name = name
         self.lesson = lesson
         self.description = description

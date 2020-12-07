@@ -103,7 +103,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNR-vE-yi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626.15384615384619" y="45.497630331753555"/>
+            <point key="canvasLocation" x="-283" y="781"/>
         </scene>
         <!--Add-->
         <scene sceneID="0wW-my-EqR">
@@ -304,6 +304,7 @@
                         <outlet property="descript" destination="J18-YW-fFZ" id="pGq-uh-S73"/>
                         <outlet property="doneButton" destination="fai-7j-UCU" id="GnB-oN-lfS"/>
                         <outlet property="lesson" destination="Svb-CG-cBw" id="wNp-JC-esr"/>
+                        <outlet property="lessonPicker" destination="Svb-CG-cBw" id="dbJ-D2-Du0"/>
                         <outlet property="name" destination="swn-ar-22f" id="mtd-Yt-q54"/>
                         <outlet property="priority" destination="ckM-Ju-FdZ" id="L4S-zQ-TLK"/>
                     </connections>
@@ -311,7 +312,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcN-BO-d8Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="O63-ii-NyI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2413.04347826087" y="45.535714285714285"/>
+            <point key="canvasLocation" x="508" y="781"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BH9-fu-CvW">
@@ -353,7 +354,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHv-7b-6Og" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502.8985507246377" y="45.535714285714285"/>
+            <point key="canvasLocation" x="508" y="45"/>
         </scene>
     </scenes>
     <resources>
