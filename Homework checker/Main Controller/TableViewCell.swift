@@ -15,16 +15,16 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var priorityLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    func set(_ homework: Homework) {
+    func set(_ homework: Model) {
         
         self.nameLabel.text = homework.name
         self.lessonLabel.text = homework.lesson
-        self.descriptLabel.text = homework.description
+        self.descriptLabel.text = homework.descript
         self.priorityLabel.text = homework.priority
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
         dateFormatter.locale = Locale(identifier: "ru_RU")
-        self.dateLabel.text = dateFormatter.string(from: homework.date)
+        self.dateLabel.text = dateFormatter.string(from: homework.date!)
     }
 }

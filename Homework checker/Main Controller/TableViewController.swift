@@ -12,20 +12,42 @@ class TableViewController: UITableViewController {
     
     var context: NSManagedObjectContext!
     
-    var model: DataModel!
-    var homeworkModel: Array<Homework> = []
+    var homeworkModel: Array<Model> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getData()
+    }
+    
+    func getData() {
+        
+        let fetchRequest: NSFetchRequest<Model> = Model.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name != nil")
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            for result in results {
+                homeworkModel.append(result)
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
     
     // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
+            context.delete(homeworkModel[indexPath.row])
             homeworkModel.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            do {
+                try context.save()
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
         }
     }
 
@@ -37,6 +59,7 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
 
         cell.set(homeworkModel[indexPath.row])
@@ -53,8 +76,22 @@ class TableViewController: UITableViewController {
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
         guard let addVC = segue.source as? AddController else { return }
         
-        homeworkModel.append(addVC.save())
-        tableView.reloadData()
+        let model = Model(context: context!)
+        let arrayData = addVC.save()
+        
+        model.name = arrayData.name
+        model.descript = arrayData.description
+        model.priority = arrayData.priority
+        model.date = arrayData.date
+        model.lesson = arrayData.lesson
+        
+        do {
+            try context!.save()
+            homeworkModel.append(model)
+            tableView.reloadData()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 
 }

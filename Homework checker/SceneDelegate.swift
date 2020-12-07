@@ -14,7 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        guard let vc = window?.rootViewController as? TableViewController else { return }
+        let nc = window?.rootViewController as! UINavigationController
+        let vc = nc.topViewController as! TableViewController
+        
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         vc.context = context
     }
