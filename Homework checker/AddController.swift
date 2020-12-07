@@ -9,8 +9,8 @@ import UIKit
 
 class AddController: UITableViewController {
     
-    var homeworkModel: Homework?
     var lessons: Array<String> = ["Русаков", "Выжигин", "Лесько", "Философия"]
+    var lessonTitle: String = ""
 
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var lesson: UIPickerView!
@@ -27,12 +27,13 @@ class AddController: UITableViewController {
         doneButton.isEnabled = false
         name.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
+        lessonTitle = lessons[0]
         lessonPicker.delegate = self
     }
     
     func save() -> Homework{
         
-        return Homework.init(name: name.text ?? "", lesson: lesson.description, description: descript.text, priority: priority.titleForSegment(at: priority.selectedSegmentIndex) ?? "", date: date.date)
+        return Homework.init(name: name.text ?? "", lesson: lessonTitle, description: descript.text, priority: priority.titleForSegment(at: priority.selectedSegmentIndex) ?? "", date: date.date)
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
@@ -68,6 +69,10 @@ extension AddController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return lessons.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        lessonTitle = lessons[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
