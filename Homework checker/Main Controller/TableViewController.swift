@@ -41,9 +41,9 @@ class TableViewController: UITableViewController {
         
         if editingStyle == .delete {
             context.delete(homeworkModel[indexPath.row])
-            homeworkModel.remove(at: indexPath.row)
             do {
                 try context.save()
+                homeworkModel.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
             } catch let error as NSError {
                 print(error.localizedDescription)
